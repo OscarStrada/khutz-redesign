@@ -1,0 +1,54 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding-block: 1.25rem;
+  background: linear-gradient(var(--bg) 55%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-self: start;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 2.25rem;
+  list-style: none;
+}
+
+.links a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: var(--fg);
+}
+
+@media (max-width: 800px) {
+  .links {
+    display: none;
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-self: end;
+}
