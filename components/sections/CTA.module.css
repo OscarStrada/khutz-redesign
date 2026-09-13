@@ -1,0 +1,17 @@
+.cta {
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2.2rem, 6vw, 4.4rem);
+  line-height: 1.06;
+  margin-bottom: 2.25rem;
+}
+
+.cta :global(.btn) {
+  margin-inline: auto;
+}
+
+.tag {
+  margin-top: 3rem;
+}
