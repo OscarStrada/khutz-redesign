@@ -1,0 +1,77 @@
+{
+  "Nav": {
+    "work": "Work",
+    "products": "Products",
+    "services": "Services",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "eyebrow": "Product design & software engineering",
+    "line1": "We help your business",
+    "line2": "grow with technology",
+    "accent": "that actually works.",
+    "sub": "Your business shouldn't have to know tech — we do, and we put it to work for you.",
+    "cta": "See our work",
+    "stat1Value": "05",
+    "stat1Label": "brands launched",
+    "stat2Value": "0",
+    "stat2Label": "technical headaches",
+    "stat3Value": "100%",
+    "stat3Label": "the code is actually yours"
+  },
+  "Portfolio": {
+    "eyebrow": "Selected work",
+    "title": "Every brand, its own color.",
+    "subtitle": "We don't impose a house style. Every project carries the color, tone and voice of the brand living inside it."
+  },
+  "CaseStudy": {
+    "back": "Back to work",
+    "challenge": "The challenge",
+    "solution": "The solution",
+    "result": "Result",
+    "viewLive": "View live site",
+    "services": "Services",
+    "stack": "Stack"
+  },
+  "Store": {
+    "eyebrow": "Digital Products · Wedding Invitations",
+    "title": "Wedding invitations, ready to launch.",
+    "subtitle": "Invitation templates built with the same code we ship for clients — RSVP, countdown and gallery, no developer required.",
+    "preview": "Preview",
+    "from": "From",
+    "buy": "Buy"
+  },
+  "Products": {
+    "eyebrow": "Digital Products",
+    "title": "Digital products, ready to use.",
+    "subtitle": "Beyond custom development, we build products you can buy directly — no quote process, no waiting.",
+    "weddingTitle": "Wedding Invitations",
+    "weddingDescription": "Invitation templates with RSVP, countdown and gallery, ready to personalize.",
+    "weddingFrom": "From $690 MXN",
+    "weddingCta": "View templates & pricing",
+    "comingSoon": "More products, coming soon"
+  },
+  "Services": {
+    "eyebrow": "Services",
+    "title": "One team, the whole way."
+  },
+  "Capabilities": {
+    "eyebrow": "What we build",
+    "title": "Not just websites."
+  },
+  "Process": {
+    "eyebrow": "How we work",
+    "title": "Four steps, no surprises."
+  },
+  "CTA": {
+    "titlePrefix": "Ready to grow with technology",
+    "accent": "that actually works",
+    "button": "Let's talk — hola@khutz.com",
+    "tag": "Design · Code · Product"
+  },
+  "Footer": {
+    "rights": "© 2026 KHUTZ — Product design and engineering.",
+    "tag": "Design proposal · V1"
+  }
+}

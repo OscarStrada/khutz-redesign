@@ -1,0 +1,77 @@
+{
+  "Nav": {
+    "work": "Trabajo",
+    "products": "Productos",
+    "services": "Servicios",
+    "process": "Proceso",
+    "contact": "Contacto"
+  },
+  "Hero": {
+    "eyebrow": "Diseño de producto & ingeniería de software",
+    "line1": "Ayudamos a tu negocio",
+    "line2": "a crecer con tecnología",
+    "accent": "que sí funciona.",
+    "sub": "Tu negocio no tiene por qué saber de tecnología — nosotros sí, y la ponemos a trabajar para ti.",
+    "cta": "Ver nuestro trabajo",
+    "stat1Value": "05",
+    "stat1Label": "marcas lanzadas",
+    "stat2Value": "0",
+    "stat2Label": "dolores de cabeza técnicos",
+    "stat3Value": "100%",
+    "stat3Label": "el código es tuyo"
+  },
+  "Portfolio": {
+    "eyebrow": "Trabajo seleccionado",
+    "title": "Cada marca, su color.",
+    "subtitle": "No imponemos un estilo propio. Cada proyecto lleva el color, el tono y la voz de la marca que lo habita."
+  },
+  "CaseStudy": {
+    "back": "Volver al trabajo",
+    "challenge": "El reto",
+    "solution": "La solución",
+    "result": "Resultado",
+    "viewLive": "Ver sitio en vivo",
+    "services": "Servicios",
+    "stack": "Stack"
+  },
+  "Store": {
+    "eyebrow": "Infoproductos · Invitaciones de boda",
+    "title": "Invitaciones de boda, listas para lanzar.",
+    "subtitle": "Plantillas de invitación construidas con el mismo código que usamos con nuestros clientes — RSVP, cuenta regresiva y galería, sin depender de un desarrollador.",
+    "preview": "Vista previa",
+    "from": "Desde",
+    "buy": "Comprar"
+  },
+  "Products": {
+    "eyebrow": "Infoproductos",
+    "title": "Productos digitales, listos para usar.",
+    "subtitle": "Además del desarrollo a la medida, construimos productos que puedes comprar directamente — sin proceso de cotización, sin espera.",
+    "weddingTitle": "Invitaciones de Boda",
+    "weddingDescription": "Plantillas de invitación con RSVP, cuenta regresiva y galería, listas para personalizar.",
+    "weddingFrom": "Desde $690 MXN",
+    "weddingCta": "Ver plantillas y precios",
+    "comingSoon": "Más productos, próximamente"
+  },
+  "Services": {
+    "eyebrow": "Nuestro proceso",
+    "title": "Un equipo, todo el camino."
+  },
+  "Capabilities": {
+    "eyebrow": "Servicios",
+    "title": "¿Qué construimos?"
+  },
+  "Process": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "Cuatro pasos, sin sorpresas."
+  },
+  "CTA": {
+    "titlePrefix": "¿Listo para crecer con tecnología",
+    "accent": "que sí funciona",
+    "button": "Empecemos — hola@khutz.com",
+    "tag": "Diseño · Código · Producto"
+  },
+  "Footer": {
+    "rights": "© 2026 KHUTZ — Diseño e ingeniería de producto.",
+    "tag": "Propuesta de diseño · V1"
+  }
+}
