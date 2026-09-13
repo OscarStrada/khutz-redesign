@@ -7,7 +7,7 @@ const STORAGE_KEY = "khutz-theme";
 
 export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     // Hydration-safe mount gate: the theme is set on <html> by an inline

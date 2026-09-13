@@ -7,18 +7,17 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { ThemeSync } from "@/components/theme/ThemeSync";
 import "../globals.css";
 
 const THEME_INIT_SCRIPT = `
 (function () {
   try {
     var stored = localStorage.getItem("khutz-theme");
-    if (stored !== "light") {
+    if (stored === "dark") {
       document.documentElement.classList.add("dark");
     }
-  } catch (e) {
-    document.documentElement.classList.add("dark");
-  }
+  } catch (e) {}
 })();
 `;
 
@@ -81,6 +80,7 @@ export default async function RootLayout({
           {THEME_INIT_SCRIPT}
         </Script>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeSync />
           <Nav />
           {children}
           <Footer />
