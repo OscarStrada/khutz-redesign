@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 import { projects, getProject } from "@/lib/content/projects";
 import styles from "./page.module.css";
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return routing.locales.flatMap((locale) =>
+    projects.map((project) => ({ locale, slug: project.slug }))
+  );
 }
 
 export async function generateMetadata({
@@ -27,14 +30,16 @@ export async function generateMetadata({
 export default async function CaseStudyPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale: rawLocale, slug } = await params;
+  setRequestLocale(rawLocale);
+  const locale = rawLocale as "es" | "en";
+
   const project = getProject(slug);
   if (!project) notFound();
 
   const t = await getTranslations("CaseStudy");
-  const locale = (await getLocale()) as "es" | "en";
   const [featured, ...rest] = project.gallery;
   const duo = rest.slice(0, 2);
   const closing = rest[2];

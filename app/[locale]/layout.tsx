@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Instrument_Serif, Archivo, IBM_Plex_Mono } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Nav } from "@/components/layout/Nav";
@@ -47,6 +47,10 @@ export const metadata: Metadata = {
     "Código propio, sin builders ni plantillas genéricas. Diseño y desarrollo web para marcas que quieren escalar en digital.",
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
   params,
@@ -59,6 +63,10 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+
+  // Enables static rendering for pages under this layout that opt in
+  // via their own generateStaticParams (see trabajo/[slug]).
+  setRequestLocale(locale);
 
   const messages = await getMessages();
 
