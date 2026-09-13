@@ -1,0 +1,184 @@
+.portfolio {
+  position: relative;
+}
+
+.list {
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  --accent: var(--fg);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid var(--line);
+  padding-block: 2rem;
+  color: inherit;
+  transition: background-color 0.35s ease, color 0.35s ease, padding-inline 0.35s ease;
+  position: relative;
+}
+
+.row:hover,
+.row:focus-visible {
+  background: var(--accent);
+  color: var(--contrast-dark);
+  padding-inline: 1.5rem;
+}
+
+.row.onDark:hover,
+.row.onDark:focus-visible {
+  color: var(--contrast-light);
+}
+
+.row:hover .meta,
+.row:focus-visible .meta {
+  color: inherit;
+  opacity: 0.72;
+}
+
+.row:hover .dot {
+  background: var(--contrast-dark);
+}
+
+.row.onDark:hover .dot {
+  background: var(--contrast-light);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  transition: background 0.35s ease;
+}
+
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.9rem, 4.4vw, 3.3rem);
+  line-height: 1.05;
+  margin-bottom: 0.35rem;
+}
+
+.slogan {
+  font-style: italic;
+  font-family: var(--font-display), serif;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.row:hover .slogan,
+.row:focus-visible .slogan {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.meta {
+  flex: 0 0 auto;
+  text-align: right;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--muted-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: opacity 0.35s ease, color 0.35s ease;
+}
+
+.arrow {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease;
+}
+
+.arrow svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.35s ease;
+}
+
+.row:hover .arrow,
+.row:focus-visible .arrow {
+  border-color: currentColor;
+}
+
+.row:hover .arrow svg,
+.row:focus-visible .arrow svg {
+  transform: rotate(45deg);
+}
+
+.thumb {
+  display: none;
+  flex: 0 0 auto;
+  width: 104px;
+  height: 76px;
+  overflow: hidden;
+}
+
+.thumb :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media not (hover: hover) {
+  .thumb {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .meta {
+    text-align: left;
+    flex-basis: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    order: 3;
+  }
+  .arrow {
+    order: 2;
+  }
+}
+
+.preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0;
+  transform: translate(-50%, -60%) scale(0.94);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+@media (hover: hover) {
+  .previewVisible {
+    opacity: 1;
+    transform: translate(-50%, -60%) scale(1);
+  }
+}
+
+@media not (hover: hover) {
+  .preview {
+    display: none;
+  }
+}

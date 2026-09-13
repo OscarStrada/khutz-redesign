@@ -1,0 +1,111 @@
+.hero {
+  padding-top: clamp(3rem, 10vh, 6rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+
+.eyebrowRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.eyebrowRow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--line-2);
+}
+
+.h1 {
+  font-size: clamp(2.6rem, 8vw, 6.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(0.15em);
+  animation: rise 0.45s ease-out forwards;
+}
+
+.line:nth-child(1) {
+  animation-delay: 0s;
+}
+.line:nth-child(2) {
+  animation-delay: 0.06s;
+}
+.line:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.accentWord {
+  font-style: italic;
+  position: relative;
+}
+
+.accentWord::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.08em;
+  height: 2px;
+  background: var(--muted-dim);
+}
+
+.foot {
+  margin-top: 2.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.sub {
+  max-width: 34ch;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.stats {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.stat {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stat b {
+  font-family: var(--font-display), serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--fg);
+  font-weight: 400;
+}
