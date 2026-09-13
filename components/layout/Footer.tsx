@@ -67,7 +67,6 @@ export async function Footer() {
         <div className={styles.bottom}>
           <span>{tFoot("rights")}</span>
           <span>{tFoot("headquarters")}</span>
-          <span>{tFoot("tag")}</span>
         </div>
       </div>
     </footer>
