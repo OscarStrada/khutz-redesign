@@ -18,12 +18,14 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  grid-column: 1;
   justify-self: start;
 }
 
 .links {
   display: flex;
   align-items: center;
+  grid-column: 2;
   justify-self: center;
   gap: 2.25rem;
   list-style: none;
@@ -50,5 +52,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  grid-column: 3;
   justify-self: end;
 }
