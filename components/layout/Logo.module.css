@@ -1,8 +1,26 @@
-.logo {
-  font-family: var(--font-body), sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.03em;
-  color: var(--fg);
+.mark {
+  display: inline-flex;
+  align-items: center;
   line-height: 1;
+}
+
+.mark :global(img) {
+  height: 15px;
+  width: auto;
+}
+
+.light {
+  display: block;
+}
+
+.dark {
+  display: none;
+}
+
+:global(:root.dark) .light {
+  display: none;
+}
+
+:global(:root.dark) .dark {
+  display: block;
 }
