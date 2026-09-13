@@ -1,0 +1,19 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.toggle:hover,
+.toggle:focus-visible {
+  color: var(--fg);
+}
+
+.toggle svg {
+  width: 15px;
+  height: 15px;
+}
