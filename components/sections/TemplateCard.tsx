@@ -27,12 +27,24 @@ export function TemplateCard({ template, locale }: { template: Template; locale:
           <span className={styles.price}>
             <small>{locale === "es" ? "Desde" : "From"}</small>${template.priceMXN} MXN
           </span>
-          <a
-            className={styles.buy}
-            href={`mailto:hola@khutz.com?subject=Plantilla%20${template.name}`}
-          >
-            {locale === "es" ? "Comprar" : "Buy"}
-          </a>
+          <div className={styles.actions}>
+            <a
+              className={styles.demo}
+              href={template.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {locale === "es" ? "Ver demo" : "View demo"}
+            </a>
+            <a
+              className={styles.buy}
+              href={template.checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {locale === "es" ? "Comprar" : "Buy"}
+            </a>
+          </div>
         </div>
       </div>
     </div>

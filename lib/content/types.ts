@@ -28,6 +28,8 @@ export interface Template {
   features: LocalizedText[];
   previewNames: string;
   previewDate: string;
+  demoUrl: string;
+  checkoutUrl: string;
 }
 
 export interface ServiceItem {

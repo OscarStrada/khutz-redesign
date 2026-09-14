@@ -112,10 +112,9 @@
 .foot {
   margin-top: auto;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-top: 0.5rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--line);
 }
 
@@ -132,18 +131,39 @@
   letter-spacing: 0.08em;
 }
 
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.demo,
 .buy {
+  flex: 1;
+  text-align: center;
   font-family: var(--font-mono), monospace;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.55rem 0.9rem;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+}
+
+.demo {
   border: 1px solid var(--line-2);
+  color: var(--muted);
+}
+
+.demo:hover {
+  border-color: var(--fg);
   color: var(--fg);
-  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.buy {
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
 }
 
 .buy:hover {
-  background: var(--fg);
-  color: var(--bg);
+  opacity: 0.82;
 }
