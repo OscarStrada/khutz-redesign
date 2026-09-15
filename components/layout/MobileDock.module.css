@@ -1,0 +1,91 @@
+.dockLayer {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .dockLayer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: max(1.1rem, env(safe-area-inset-bottom));
+    z-index: 50;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    pointer-events: none;
+  }
+}
+
+.dock {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 999px;
+  background: var(--fg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  pointer-events: auto;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  height: 2.4rem;
+  padding-inline: 0.55rem;
+  border-radius: 999px;
+  color: var(--bg);
+  transition: background-color 0.2s ease;
+}
+
+.pill:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ThemeToggle/LangToggle were built for the top nav's own colors, including
+   :hover/:focus-visible states that also set color — !important guarantees
+   the dock's inverted palette wins regardless of stylesheet order. Their own
+   width/height (e.g. ThemeToggle's 28px button) is left untouched. */
+.pill button,
+.pill svg {
+  color: var(--bg) !important;
+}
+
+.pill button:global(.active) {
+  color: var(--bg) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+}
+
+.sep {
+  width: 1px;
+  height: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 1.1rem;
+  background: var(--fg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  pointer-events: auto;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 0.5rem;
+  color: var(--bg);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  opacity: 0.75;
+}

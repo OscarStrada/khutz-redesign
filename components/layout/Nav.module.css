@@ -55,3 +55,20 @@
   grid-column: 3;
   justify-self: end;
 }
+
+/* Below this, the top bar shows only the centered logo — theme and
+   language move into the floating MobileDock instead. */
+@media (max-width: 640px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .logoLink {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .controls {
+    display: none;
+  }
+}
