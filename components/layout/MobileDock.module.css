@@ -14,6 +14,12 @@
     align-items: center;
     gap: 0.6rem;
     pointer-events: none;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+
+  .dockHidden {
+    transform: translateY(calc(100% + 1.5rem));
   }
 }
 
@@ -53,6 +59,15 @@
   color: var(--bg) !important;
 }
 
+/* The menu icon has no intrinsic width/height (only a viewBox), so without
+   an explicit size some browsers fall back to the UA default (300x150)
+   instead of scaling to fit — pin it to match the other dock icons. */
+.pill > svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
 .pill button:global(.active) {
   color: var(--bg) !important;
   background: rgba(255, 255, 255, 0.22) !important;
@@ -68,13 +83,14 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 0.15rem;
   padding: 0.85rem 1.4rem;
   border-radius: 1.1rem;
   background: var(--fg);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
   pointer-events: auto;
+  min-width: 11rem;
 }
 
 .menu a {
@@ -82,7 +98,7 @@
   padding: 0.5rem 0.5rem;
   color: var(--bg);
   font-size: 0.85rem;
-  text-align: center;
+  text-align: left;
 }
 
 .menu a:hover,

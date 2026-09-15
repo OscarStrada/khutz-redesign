@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LangToggle } from "./LangToggle";
@@ -10,6 +10,31 @@ import styles from "./MobileDock.module.css";
 export function MobileDock() {
   const t = useTranslations("Nav");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    lastScrollY.current = window.scrollY;
+
+    function onScroll() {
+      const y = window.scrollY;
+      const diff = y - lastScrollY.current;
+
+      // Ignore tiny jitter (mobile rubber-banding, sub-pixel scroll) so the
+      // dock doesn't flicker, and never hide it while the menu is open.
+      if (Math.abs(diff) < 8 || menuOpen) return;
+
+      setHidden(diff > 0 && y > 80);
+      lastScrollY.current = y;
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (menuOpen) setHidden(false);
+  }, [menuOpen]);
 
   const links = [
     { href: "/#trabajo", label: t("work") },
@@ -20,7 +45,7 @@ export function MobileDock() {
   ];
 
   return (
-    <div className={styles.dockLayer}>
+    <div className={`${styles.dockLayer} ${hidden ? styles.dockHidden : ""}`}>
       {menuOpen && (
         <ul className={styles.menu}>
           {links.map((link) => (
