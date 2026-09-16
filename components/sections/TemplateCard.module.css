@@ -63,6 +63,16 @@
   color: #241a10;
 }
 
+.canela {
+  background: #2c2416;
+  color: #f5ede3;
+}
+
+.azahar {
+  background: #c48f86;
+  color: #2b2b28;
+}
+
 .body {
   padding: 1.5rem;
   display: flex;

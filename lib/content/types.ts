@@ -22,7 +22,7 @@ export interface Project {
 export interface Template {
   slug: string;
   name: string;
-  variant: "alba" | "marea" | "lino";
+  variant: "alba" | "marea" | "lino" | "canela" | "azahar";
   style: LocalizedText;
   priceMXN: number;
   features: LocalizedText[];
