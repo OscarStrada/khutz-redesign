@@ -1,0 +1,72 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.filterLabel {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-dim);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill,
+.pillActive {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--line-2);
+  color: var(--muted);
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.pill:hover {
+  border-color: var(--fg);
+  color: var(--fg);
+}
+
+.pillActive {
+  border-color: var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 0.95rem;
+  padding-block: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

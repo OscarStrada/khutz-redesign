@@ -37,10 +37,14 @@
   "Store": {
     "eyebrow": "Infoproductos · Invitaciones de boda",
     "title": "Invitaciones de boda, listas para lanzar.",
-    "subtitle": "Plantillas de invitación construidas con el mismo código que usamos con nuestros clientes — RSVP, cuenta regresiva y galería, sin depender de un desarrollador.",
+    "subtitle": "Plantillas de invitación con código propio, no plantillas genéricas de un builder — RSVP, cuenta regresiva y galería, listas para personalizar sin depender de un desarrollador.",
     "preview": "Vista previa",
     "from": "Desde",
-    "buy": "Comprar"
+    "buy": "Comprar",
+    "filterAll": "Todas",
+    "filterStyle": "Estilo",
+    "filterPrice": "Precio",
+    "noResults": "No hay plantillas con esos filtros."
   },
   "Products": {
     "eyebrow": "Infoproductos",

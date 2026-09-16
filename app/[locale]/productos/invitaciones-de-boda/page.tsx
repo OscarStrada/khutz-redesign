@@ -1,7 +1,6 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { templates } from "@/lib/content/templates";
-import { TemplateCard } from "@/components/sections/TemplateCard";
-import styles from "./page.module.css";
+import { TemplatesGrid } from "@/components/sections/TemplatesGrid";
 
 export async function generateMetadata() {
   const t = await getTranslations("Store");
@@ -24,11 +23,7 @@ export default async function PlantillasPage() {
           <p>{t("subtitle")}</p>
         </div>
 
-        <div className={styles.grid}>
-          {templates.map((template) => (
-            <TemplateCard key={template.slug} template={template} locale={locale} />
-          ))}
-        </div>
+        <TemplatesGrid templates={templates} locale={locale} />
       </div>
     </section>
   );

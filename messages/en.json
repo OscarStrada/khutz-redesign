@@ -37,10 +37,14 @@
   "Store": {
     "eyebrow": "Digital Products · Wedding Invitations",
     "title": "Wedding invitations, ready to launch.",
-    "subtitle": "Invitation templates built with the same code we ship for clients — RSVP, countdown and gallery, no developer required.",
+    "subtitle": "Wedding invitation templates built with real code, not a generic drag-and-drop builder — RSVP, countdown and gallery, ready to customize without needing a developer.",
     "preview": "Preview",
     "from": "From",
-    "buy": "Buy"
+    "buy": "Buy",
+    "filterAll": "All",
+    "filterStyle": "Style",
+    "filterPrice": "Price",
+    "noResults": "No templates match those filters."
   },
   "Products": {
     "eyebrow": "Digital Products",
